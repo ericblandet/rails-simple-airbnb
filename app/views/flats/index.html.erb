@@ -1,0 +1,24 @@
+<h1>Our Flats</h1>
+
+<div class="row">
+  <% @flats.each do |flat| %>
+    <div class="card m-3 shadow bg-white rounded" style="width: 18rem;">
+    <%= image_tag(flat.picture_url, height:"250px", alt:"flat picture") %>
+      <div class="card-body">
+      <div class="bg-light">
+        <h5 class="card-title"><%= flat.name %></h5>
+        <p class="card-text"><%= flat.address %></p>
+        <span><i class="fas fa-user"></i><%= flat.number_of_guests %></span>
+        <span><i class="fas fa-money-check-alt"></i><%= flat.price_per_night %></span>
+      </div>
+        <div class="bg-white p-3 position-relative-bottom">
+          <%= link_to "More info", flat_path(flat) %>
+          <%= link_to "Edit", edit_flat_path(flat), class:"text-warning"%>
+          <%= link_to "Remove", flat_path(flat), class:"text-danger", method:"delete", data: { confirm: "Are you sure?" }%>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+

@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <%= image_tag(@flat.picture_url, width:"100%", height:"300px", alt:"flat picture") %>
+</div>
+<div class="row">
+  <div class="col-9">
+    <div class="card m-3 shadow p-3 mb-5 bg-white rounded">
+      <h1> <%=@flat.name  %></h1>
+      <p><%=@flat.address %> </p>
+    </div>
+
+    <div class="card m-3 shadow p-3 mb-5 bg-white rounded">
+      <h2>A little bit more about this place</h2>
+      <p><%= @flat.description %></p>
+    </div>
+
+    <div class="card m-3 shadow p-3 mb-5 bg-white rounded">
+      <h2>Details</h2>
+      <span><i class="fas fa-user"></i><%= @flat.number_of_guests %></span>
+      <span><i class="fas fa-money-check-alt"></i><%= @flat.price_per_night %></span>
+    </div>
+  </div>
+
+  <div class="col-3">
+    <div class="card m-3 shadow p-3 mb-5 bg-white rounded">
+      <h2>Book this flat</h2>
+      <form action="">
+        <input type="">
+        <input type="">
+        <input type="submit">
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
